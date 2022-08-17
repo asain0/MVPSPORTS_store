@@ -16,7 +16,7 @@
 .menuNav {
 	height: 100px;
 	width: 100%;
-	background-color: #222;
+	background-color: var(second-color);
 }
 
 .menuNav ul {

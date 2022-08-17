@@ -2,9 +2,14 @@
   padding: 0;
   margin: 0;
   box-sizing: border-box;
+  --main-color: #D15A09;
+  --second-color:#222;
+  --third-color: #efefef;
+  --main-bg-color: #efefef;
+  
 }
 
 html, body, #root{
-  background-color: #efefef;
+  background-color: var(main-bg-color);
   height: 100%;
 }
