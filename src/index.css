@@ -6,10 +6,12 @@
   --second-color:#222;
   --third-color: #efefef;
   --main-bg-color: #efefef;
+  --main-font-color:#222;
+  --second-font-color:#efefef;
   
 }
 
 html, body, #root{
-  background-color: var(main-bg-color);
+  background-color: var(--main-bg-color);
   height: 100%;
 }
