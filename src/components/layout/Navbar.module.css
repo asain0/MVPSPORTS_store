@@ -1,16 +1,3 @@
-.secao_menu li{
-    color: var(--second-color);
-    text-decoration: none;
-}
-
-.secao_menu a:hover{
-    color: var(--second-color);
-}
-
-.list{
-	margin-top: 10px;
-}
-
 .menuNav {
 	height: 100px;
 	width: 100%;
@@ -20,12 +7,6 @@
 .menuNav ul {
 	float: right;
 	margin-right: 20px;
-}
-
-.secao_menu {
-	display: inline-block;
-	line-height: 80px;
-	margin: 0 5px;
 }
 
 .menuNav ul li a {
@@ -43,11 +24,33 @@
 }
 
 .menu svg{
-    font-size: 1.2em;
-    cursor: pointer;
+	 font-size: 1.2em;
+	 cursor: pointer;
 	margin-top: 20px;
 	margin-left: 20px;
 }
+
+
+.secao_menu li{
+    color: var(--second-color);
+    text-decoration: none;
+}
+
+.secao_menu a:hover{
+    color: var(--second-color);
+}
+
+.list{
+	margin-top: 10px;
+}
+
+
+.secao_menu {
+	display: inline-block;
+	line-height: 80px;
+	margin: 0 5px;
+}
+
 
 .checkbtn {
 	font-size: 30px;
