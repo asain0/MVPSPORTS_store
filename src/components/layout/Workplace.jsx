@@ -5,6 +5,7 @@ import Login from '../../components/pages/Login';
 import Cadastro from '../../components/pages/Cadastro';
 import Catalogo from '../../components/pages/Catalogo';
 import Carrinho from '../../components/pages/Carrinho';
+import Produto from '../../components/pages/Produto';
 
 function Workplace() {
    return ( 
@@ -15,6 +16,7 @@ function Workplace() {
             <Route path= "/Cadastro" element={<Cadastro/>}/> 
             <Route path= "/Catalogo" element={<Catalogo/>}/>
             <Route path= "/Carrinho" element={<Carrinho/>}/> 
+            <Route path= "/Produto" element={<Produto/>}/> 
           </Routes>
       </div>
     );
