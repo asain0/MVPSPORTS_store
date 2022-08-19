@@ -31,11 +31,7 @@ let tamanhosProduto = [
    conteudo: "G"
 },
 ]
-//  Classe: alguma classe adicional para estilização do componente
-//  name: nome do grupo do componente
-//  value: valor do componente selecionado
-//  id,  for: link entre label e input componente selecionado
-//  conteudo: conteúdo a ser apresentado no componente
+
 function Produto() {
    return ( 
       <div className="card_produto">
@@ -79,10 +75,7 @@ function Produto() {
                                  <label for="corMesclada" id="corPreta"> </label>
                            </div>
                         </div> */}
-
                         <AsainChck opcoes={coresProduto} name="cor"/>
-                        
-
                      </div>
 
                      <div class="produto__tamanho">

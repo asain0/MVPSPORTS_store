@@ -20,14 +20,6 @@ function AsainChck({opcoes, name}) {
             )
          })}
        
-         {/* <div class="produto__cores__opcoes__item input-radio-hckdv">
-            <input type="radio" name="cor" value="branca" id="corBranca"/>
-            <label for="corBranca" id="corBranca"> </label>
-         </div>
-         <div class="produto__cores__opcoes__item input-radio-hckdv">
-            <input type="radio" name="cor" value="verde" id="corMesclada" checked/>
-            <label for="corMesclada" id="corPreta"> </label>
-         </div> */}
       </div>
          
 
