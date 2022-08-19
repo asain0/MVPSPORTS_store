@@ -23,4 +23,6 @@
 .button-hckdv a:hover{
    background: var(--second-color) !important;
 	color: white !important;
+	cursor: pointer;
+
 }
