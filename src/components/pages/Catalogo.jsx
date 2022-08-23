@@ -35,7 +35,7 @@ function Catalogo(){
                 produtos.map( produto => (
                     <Link to="/Produto">
                     <div className="cardProduto">
-                        <img src = {produto.img}/>
+                        <img src = {produto.img} alt='imagem do produto'/>
                         <div className="cardTitulo">{produto.nome}</div>
                         <div className="cardPreco">{produto.preco}</div>
                     </div>

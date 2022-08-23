@@ -3,7 +3,8 @@ import "./AsainBtn.css"
 function AsainBtn(props) {
    return ( 
       <div className="produto_opcoes button-hckdv">
-         <a href={props.acao}>{props.titulo}</a>
+         <a href='www.google.com'>{props.titulo}</a>
+         {/* <a href={props.acao}>{props.titulo}</a> */}
       </div>
     );
 }
