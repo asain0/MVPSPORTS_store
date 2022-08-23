@@ -1,4 +1,4 @@
-estiloBotao {
+.estiloBotao {
     margin-bottom: 30px;
     margin-top: 30px;
     background-color: var(--main-color) !important;
@@ -11,8 +11,8 @@ estiloBotao {
     text-align: center;
 }
 
-estiloBotao:hover {
+.estiloBotao:hover {
     cursor: pointer;
-    background-color: var(--second-color) IMPO !important;
+    background-color: var(--second-color)!important;
     transition: .5s ;
 }
