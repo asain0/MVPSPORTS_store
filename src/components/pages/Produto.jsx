@@ -67,41 +67,12 @@ function Produto() {
 
                         <div class="produto__cores">
                            <span>COR: </span> <span class="produto_cores_selecionada">Preta</span>
-                           {/* <div class="produto__cores__opcoes">
-                              <div class="produto__cores__opcoes__item input-radio-hckdv">
-                                    <input type="radio" name="cor" value="branca" id="corBranca"/>
-                                    <label for="corBranca" id="corBranca"> </label>
-                              </div>
-                              <div class="produto__cores__opcoes__item input-radio-hckdv">
-                                    <input type="radio" name="cor" value="verde" id="corMesclada" checked/>
-                                    <label for="corMesclada" id="corPreta"> </label>
-                              </div>
-                           </div> */}
                            <AsainChck opcoes={coresProduto} name="cor"/>
                         </div>
 
                         <div class="produto__tamanho">
                            <span>Tamanho:</span> <span class="produto__tamanho__selecionado">P</span>
                            <AsainChck opcoes={tamanhosProduto} name="tamanhos"/>
-                           {/* <div class="produto__tamanho__opcoes">
-                              <div class="produto__tamanho__opcoes__item input-radio-hckdv">
-                                    <input type="radio" name="tamanho" value="P" id="tamanhoP" checked/>
-                                    <label for="tamanhoP">P</label>
-                              </div>
-                              <div class="produto__tamanho__opcoes__item input-radio-hckdv">
-                                    <input type="radio" name="tamanho" value="M" id="tamanhoM"/>
-                                    <label for="tamanhoM">M</label>
-                              </div>
-                              <div class="produto__tamanho__opcoes__item input-radio-hckdv">
-                                    <input type="radio" name="tamanho" value="G" id="tamanhoG"/>
-                                    <label for="tamanhoG">G</label>
-                              </div>
-                              <div class="produto__tamanho__opcoes__item input-radio-hckdv">
-                                    <input type="radio" name="tamanho" value="GG" id="tamanhoGG"/>
-                                    <label for="tamanhoGG">GG</label>
-                              </div>
-
-                           </div> */}
                         </div>
                         <AsainBtn titulo="Comprar"/>
                         <AsainBtn titulo="Adicionar ao carrinho"/>
