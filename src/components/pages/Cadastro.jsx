@@ -1,3 +1,4 @@
+import MvpButton from '../MvpButton/MvpButton';
 import './cadastro.css';
 
 function Cadastro(){
@@ -139,7 +140,7 @@ function Cadastro(){
                             </div>
 
                             <div>
-                            <button type = "submit"><div class="botao"> Cadastrar </div></button>
+                            <MvpButton tittle="Cadastrar"/>
                             </div>
 
                         </div>
