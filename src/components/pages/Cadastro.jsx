@@ -1,4 +1,4 @@
-import UIButton from '../NayBtn/NayBtn';
+import MvpButton from '../MvpButton/MvpButton';
 import './cadastro.css';
 
 function Cadastro(){
@@ -140,7 +140,7 @@ function Cadastro(){
                             </div>
 
                             <div>
-                            <UIButton tittle="Cadastrar"/>
+                            <MvpButton tittle="Cadastrar"/>
                             </div>
 
                         </div>

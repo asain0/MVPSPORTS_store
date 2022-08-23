@@ -1,11 +1,11 @@
 import React from 'react'
-import "./NayBtn.css"
+import "./MvpButton.css"
 
-function UIButton(props) {
+function MvpButton(props) {
     return (
         <button className="estiloBotao">{props.tittle}</button>   
     ) 
 }
 
-export default UIButton;
+export default MvpButton;
 
