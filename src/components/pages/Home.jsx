@@ -1,5 +1,5 @@
 import React from 'react'
-import CarouselSection from '../layout/CarouselSection'
+import CarouselSection from '../CarouselSection/CarouselSection'
 
 const Home = () => {
   return (

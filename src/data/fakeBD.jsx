@@ -6,7 +6,7 @@ export const produtos = [
    promo: false,
    promoPrice: 0.0,
    size: 42,
-   img: ['./src/data/img/bermuda-img.jpg']
+   img: '/src/data/img/bermuda-img.jpg'
 },
    {
    id: 2,

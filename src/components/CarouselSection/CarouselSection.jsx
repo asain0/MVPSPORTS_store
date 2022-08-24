@@ -1,6 +1,7 @@
 import React from 'react'
 import { useEffect, useState, useRef } from 'react'
-import '../layout/CarouselSection.css'
+import { Link } from 'react-router-dom'
+import '../CarouselSection/CarouselSection.css'
 
 function CarouselSection(props) {
   const [data, setData] = useState([])
@@ -36,20 +37,23 @@ function CarouselSection(props) {
       const { id, name, price, oldPrice, image } = item
 
       return (
-        <div className="item" key={id}>
-          <div className="image">
-            <img src={image} alt={name} object-fit={'fill'} />
+        <Link key={id} to="/Produto">
+          <div className="item" key={id}>
+            <div className="image">
+              <img src={image} alt={name} object-fit={'fill'} />
+            </div>
+            <div className="info">
+              {name && oldPrice && price && (
+                <div>
+                  <span className="name">{name}</span>
+                  <span className="oldPrice">R$ {oldPrice}</span>
+                  <span className="price">R$ {price}</span>
+                </div>
+              )}
+            </div>
           </div>
-          <div className="info">
-            {name && oldPrice && price && (
-              <div>
-                <span className="name">{name}</span>
-                <span className="oldPrice">R$ {oldPrice}</span>
-                <span className="price">R$ {price}</span>
-              </div>
-            )}
-          </div>
-        </div>
+
+        </Link>
       )
     })
   }
@@ -79,11 +83,11 @@ function CarouselSection(props) {
   if (!data || !data.length) return null
 
   return (
-    <div className="container">
-      <div className="news">
+    <div className="carousel">
+      <div className="carousel__tittle">
         <h1>{props.title}</h1>
       </div>
-      <div className="carousel" ref={carousel}>
+      <div className="carousel__itens" ref={carousel}>
         <Card data={data} />
       </div>
 
