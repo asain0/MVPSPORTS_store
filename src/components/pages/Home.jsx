@@ -1,16 +1,23 @@
-function Home(){
-    return (
-        <div className="home">
-            <br></br>
-            <h1>MVP Sports</h1>
-            <div className="promo">promo</div>
-            <div className="novidades">Novidades</div>
-            <div className="escolha">escolha sua nike</div>
-            <div className="novoEsporte">Experimente um novo esporte</div>
-            <div className="blog">BLOG</div>
+import React from 'react'
+import CarouselSection from '../CarouselSection/CarouselSection'
 
-        </div>
-    )
+const Home = () => {
+  return (
+    <div>
+      <CarouselSection
+        dataUrl={'http://localhost:3000/static/shoes.json'}
+        title={'Novidades'}
+      />
+      <CarouselSection
+        dataUrl={'http://localhost:3000/static/sports.json'}
+        title={'Experimente um novo esporte'}
+      />
+      <CarouselSection
+        dataUrl={'http://localhost:3000/static/blog.json'}
+        title={'Blog'}
+      />
+    </div>
+  )
 }
 
 export default Home

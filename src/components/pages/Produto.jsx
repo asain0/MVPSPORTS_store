@@ -3,6 +3,7 @@ import imgProduto from "../../data/img/bermuda-img.jpg"
 import AsainBtn from "../AsainBtn/AsainBtn";
 import AsainChck from "../AsainChck/AsainChck";
 import MVPProdutoGaleria from "../MVPProdutoGaleria/MVPProdutoGaleria";
+import CarouselSection from "../CarouselSection/CarouselSection";
 
 let coresProduto = [{
    id: 1,
@@ -81,8 +82,11 @@ function Produto() {
             </main>
 
          <div className="outrosProdutos">
-            outras seções com produtos
-         </div>
+         <CarouselSection
+        dataUrl={'http://localhost:3000/static/shoes.json'}
+        title={'Novidades'}
+      />
+                     </div>
 
          </div>
       
