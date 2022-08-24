@@ -19,7 +19,7 @@ function CarouselSection(props) {
     }
 
     fetchData()
-  }, [])
+  }, [props.dataUrl]);
 
   const handleLeftClick = e => {
     e.preventDefault()
@@ -62,7 +62,7 @@ function CarouselSection(props) {
     return (
       <button onClick={props.onClick}>
         <img
-          src="\static\images\216151_right_chevron_icon.png"
+          src="/static/images/216151_right_chevron_icon.png"
           alt="Scroll left"
         ></img>{' '}
       </button>
@@ -73,7 +73,7 @@ function CarouselSection(props) {
     return (
       <button onClick={props.onClick}>
         <img
-          src="\static\images\216151_right_chevron_icon.png"
+          src="/static/images/216151_right_chevron_icon.png"
           alt="Scroll Right"
         ></img>{' '}
       </button>
