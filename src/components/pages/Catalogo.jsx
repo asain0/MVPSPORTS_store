@@ -1,39 +1,39 @@
 import img1 from "../../data/img/bermuda-img.jpg"
 import "./Catalogo.css"
 import { Link } from 'react-router-dom'
-
-const produtos = [
-    {
-        id:1,
-        nome: "Bermuda luta 1",
-        preco: 10.2,
-        img: {img1}
-    },
-    {
-        id:2,
-        nome: "Bermuda luta 1",
-        preco: 10.2,
-        img: {img1}
-    },
-    {
-        id:3,
-        nome: "Bermuda luta 1",
-        preco: 10.2,
-        img: {img1}
-    }
+import {produtos} from '../../data/fakeBD';
+// const produtos = [
+//     {
+//         id:1,
+//         nome: "Bermuda luta 1",
+//         preco: 10.2,
+//         img: {img1}
+//     },
+//     {
+//         id:2,
+//         nome: "Bermuda luta 1",
+//         preco: 10.2,
+//         img: {img1}
+//     },
+//     {
+//         id:3,
+//         nome: "Bermuda luta 1",
+//         preco: 10.2,
+//         img: {img1}
+//     }
     
-]
-
-
+// ]
+const listaProdutos = produtos;
+console.log(listaProdutos);
 function Catalogo(){
     return (
         <div>
             <br></br>
-            <h1>Catálogo</h1>
+            <h1>Catálogo </h1>
             <br></br>
             {
-                produtos.map( produto => (
-                    <Link to="/Produto">
+                listaProdutos.map( produto => (
+                    <Link key={produto.id} to="/Produto">
                     <div className="cardProduto">
                         <img src = {produto.img}/>
                         <div className="cardTitulo">{produto.nome}</div>
