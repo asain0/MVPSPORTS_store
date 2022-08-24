@@ -55,7 +55,7 @@ function Login(){
                                 <label  for="conexao"> MANTELHA-ME CONECTADO </label>
                             </div>
 
-                            <div class="passwordLost"><a href="">Esqueci minha senha</a></div>
+                            <div class="passwordLost"><a href="www.google.com">Esqueci minha senha</a></div>
 
                             <div class="botaoLogin">
                                 <AsainBtn titulo="entrar"/>
