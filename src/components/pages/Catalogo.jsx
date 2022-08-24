@@ -1,5 +1,4 @@
 import "./Catalogo.css"
-import { Link } from 'react-router-dom'
 import {produtos} from '../../data/fakeBD';
 import CarouselSection from "../CarouselSection/CarouselSection";
 
