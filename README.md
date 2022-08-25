@@ -18,4 +18,4 @@ Projeto de e-commerce elaborado para o programa GoDev da IMÃ Learning Place, du
 
 <a href="https://github.com/Raul-jba"> <img src="https://avatars.githubusercontent.com/u/79773917?v=4" width=100px>    Raul</a>
 
-<a href="https://github.com/byyasminmeirelles"> <img src="https://avatars.githubusercontent.com/u/105893396?v=4" width=100px>    Yasmin</a>
+<!-- <a href="https://github.com/byyasminmeirelles"> <img src="https://avatars.githubusercontent.com/u/105893396?v=4" width=100px>    Yasmin</a> -->
