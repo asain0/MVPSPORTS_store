@@ -1,6 +1,10 @@
 import './login.css'
 import AsainBtn from '../AsainBtn/AsainBtn'
+import MvpModal from '../MvpModal/MvpModal'
+import { useState } from 'react'
 function Login(){
+    const [isForgotPwdVisible, setVisibilityForgotPwd] = useState(false);
+    
     return (
         <div>
             <br></br>
@@ -46,7 +50,6 @@ function Login(){
                             <li class="listEmail"><label for="senha">Senha *</label></li>
                             <li class="listEmail"><input class="listInput" name="senha" required=""  id="senha" type="password"/></li>
                         </ul>
-
                         
                         <div containerFooter>
 
@@ -55,8 +58,11 @@ function Login(){
                                 <label  for="conexao"> MANTELHA-ME CONECTADO </label>
                             </div>
 
-                            <div class="passwordLost"><a href="www.google.com">Esqueci minha senha</a></div>
-
+                            <div class="passwordLost">
+                                {isForgotPwdVisible ? <MvpModal onClose={()=> setVisibilityForgotPwd(false)} title='Recuperar Senha'/> : null}
+                                <i onClick={()=>{setVisibilityForgotPwd(true)}} >Esqueci minha senha</i>
+                            </div>
+                            
                             <div class="botaoLogin">
                                 <AsainBtn titulo="entrar"/>
                                 </div>
@@ -64,8 +70,8 @@ function Login(){
                             {/* <div class="botaoCadastro"><button>CRIAR UMA CONTA</button></div> */}
                             <div class="botaoCadastro">
                                 <AsainBtn titulo="CRIAR UMA CONTA"/>
-                                
-                                </div>
+                            </div>
+                            
                         </div>
                     </div>
                 </div>

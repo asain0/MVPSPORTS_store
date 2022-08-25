@@ -86,7 +86,11 @@ ul li {
    cursor: pointer;
 }
 
-.botaoLogin button, .botaoCadastro button {
+.botaoLogin, .botaoCadastro {
+   display: flex;
+   justify-content: center;
+}
+.botaoLogin *, .botaoCadastro * {
 
    text-align: center;
    width: 90%;
@@ -109,6 +113,12 @@ ul li {
 
 .botaoCadastro button:hover, .botaoLogin button:hover {
    cursor: pointer;
+}
+
+.passwordLost i{
+   color:#8827af;
+   cursor: pointer;
+
 }
 
 /* LAYOU SECTION */
