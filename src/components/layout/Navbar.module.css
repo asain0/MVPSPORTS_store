@@ -1,18 +1,44 @@
+.secao_menu li{
+    color: black;
+    text-decoration: none;
+}
+
+.secao_menu a:hover{
+    color: black;
+}
+
+.list{
+	margin-top: 10px;
+}
+
 .menuNav {
 	height: 100px;
 	width: 100%;
-	background-color: var(--second-color);
+	background-color: #222;
+
 }
 
-.menuNav ul {
-	float: right;
-	margin-right: 20px;
+.menu_loja, .cart,.logo_loja{
+	display: inline;
 }
+
+
+.menuNav ul, .cart  {
+	float: right;
+	margin-right: 5px;
+}
+
+.secao_menu {
+	display: inline-block;
+	line-height: 80px;
+	margin: 0 5px;
+}
+
 
 .menuNav ul li a {
-	color: var(--third-color);
+	color: white;
 	font-weight: bold;
-	background: var(--main-color);
+	background: #D15A09;
 	font-size: 17px;
 	padding: 7px 13px;
 	border-radius: 3px;
@@ -24,37 +50,16 @@
 }
 
 .menu svg{
-	 font-size: 1.2em;
-	 cursor: pointer;
+    font-size: 2em;
+    cursor: pointer;
 	margin-top: 20px;
 	margin-left: 20px;
+	color: #D15A09;
 }
-
-
-.secao_menu li{
-    color: var(--second-color);
-    text-decoration: none;
-}
-
-.secao_menu a:hover{
-    color: var(--second-color);
-}
-
-.list{
-	margin-top: 10px;
-}
-
-
-.secao_menu {
-	display: inline-block;
-	line-height: 80px;
-	margin: 0 5px;
-}
-
 
 .checkbtn {
 	font-size: 30px;
-	color: var(--main-color);
+	color: var(--second-color-variant);
 	float: left;
 	line-height: 80px;
 	cursor: pointer;
@@ -65,13 +70,32 @@
 	display: none;
 }
 
+.logo_loja{
+	display: inline;
+}
+
+
 @media (max-width: 991px){
+	.menuNav {
+		display:inline-block;
+	}
+
+	.menu_loja{
+		padding-top: 10px;
+	}
+
+	.logo{
+		float: right;
+	}
+
+	.menu_loja,.cart{
+		float: left;
+	}
+
 	.check{
 		display: none;
 	}
-	.logo_mvp{
-		float: right;
-	}
+
 	label.logo{
 		font-size: 30px;
 		padding-left: 10px;
@@ -86,7 +110,7 @@
 		position: fixed;
 		width: 100%;
 		height: 100vh;
-		background: var(--second-color);
+		background: #222222;
 		top: 80px;
 		left: -100%;
 		text-align: center;
