@@ -2,6 +2,7 @@ import React from 'react'
 import { useEffect, useState, useRef } from 'react'
 import { Link } from 'react-router-dom'
 import '../CarouselSection/CarouselSection.css'
+import ProductCard from '../layout/ProductCard'
 
 function CarouselSection(props) {
   const [data, setData] = useState([])
@@ -89,6 +90,7 @@ function CarouselSection(props) {
       </div>
       <div className="carousel__itens" ref={carousel}>
         <Card data={data} />
+        {/* <ProductCard data={data}/> */}
       </div>
 
       <div className="buttons">

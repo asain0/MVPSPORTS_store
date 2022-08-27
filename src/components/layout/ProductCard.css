@@ -15,10 +15,7 @@
   scroll-behavior: smooth;
 }
 
-/* .card .productCard::-webkit-scrollbar {
-  display: none;
-} */
-
+/* 
 .card .productCard .item {
   background-color: white;
   margin: 10px;
@@ -69,4 +66,4 @@ object-fit: cover;
   font-size: 1.2rem;
   font-weight: bold;
   background-color: #ff7e3b ;
-}
+} */

@@ -1,11 +1,13 @@
 import React from 'react'
 import { useEffect, useState, useRef } from 'react'
+import CardProduto from '../CardProduto/CardProduto'
 import '../layout/ProductCard.css'
 
 function ProductCard(props) {
   const [data, setData] = useState([])
-  const productCard = useRef(null)
+  // const productCard = useRef(null)
 
+  // DEV informou que fez esse trecho para acessar a lista de produtos
   useEffect(() => {
     const fetchData = async () => {
       try {
@@ -18,27 +20,14 @@ function ProductCard(props) {
     }
 
     fetchData()
-  }, [])
+  }, [props.dataUrl])
 
   const Card = props => {
     return props.data.map(item => {
-      const { id, name, price, oldPrice, image } = item
+      // const { id, name, price, oldPrice, image } = item
 
       return (
-        <div className="item" key={id}>
-          <div className="image">
-            <img src={image} alt={name} object-fit={'fill'} />
-          </div>
-          <div className="info">
-            {name && oldPrice && price && (
-              <div>
-                <span className="name">{name}</span>
-                <span className="oldPrice">R$ {oldPrice}</span>
-                <span className="price">R$ {price}</span>
-              </div>
-            )}
-          </div>
-        </div>
+        <CardProduto dadosProduto = {item}/>
       )
     })
   }
@@ -48,7 +37,8 @@ function ProductCard(props) {
       <div className="title">
         <h1>{props.title}</h1>
       </div>
-      <div className="productCard" ref={productCard}>
+      {/* <div className="productCard" ref={productCard}> */}
+      <div className="productCard">
         <Card data={data} />
       </div>
     </div>
