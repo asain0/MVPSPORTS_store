@@ -30,6 +30,10 @@ const listaProdutos = [
 ];
 
 function Cart(props){
+
+    localStorage.setItem('mvpCart',JSON.stringify(listaProdutos))
+
+    console.log(localStorage.getItem('mvpCart'))
     return (
         <div className="menuCart">
                 <input type="checkbox" className="check_cart" id="check_cart"/>
