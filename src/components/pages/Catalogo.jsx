@@ -1,44 +1,39 @@
-import "./Catalogo.css"
-import {produtos} from '../../data/fakeBD';
-import CarouselSection from "../CarouselSection/CarouselSection";
+import React from 'react'
+import ProductCard from '../layout/ProductCard'
+import InputSearch from '../layout/InputSearch'
 
-const listaProdutos = produtos;
-console.log(listaProdutos);
 function Catalogo(){
     return (
         <div>
-            <br></br>
-            <h1>Catálogo </h1>
-            <br></br>
-            <CarouselSection
-                dataUrl={'http://localhost:3000/static/shoes.json'}
-                title={'Novidades'}
-            />      
-            <CarouselSection
-            dataUrl={'http://localhost:3000/static/shoes.json'}
-            title={'Novidades'}
-            />
-            <CarouselSection
-                dataUrl={'http://localhost:3000/static/shoes.json'}
-                title={'Novidades'}
-            />
-
-            {/* {
-                listaProdutos.map( produto => (
-                    <Link key={produto.id} to="/Produto">
-                    <div className="cardProduto">
-                        {console.log(produto.img)}
-                        <img src = {produto.img} alt="produto"/>
-                        <div className="cardTitulo">{produto.nome}</div>
-                        <div className="cardPreco">{produto.preco}</div>
-                    </div>
-                    
-                    </Link>
-                ))
-            } */}
-            <br></br>
+            <InputSearch />
+         <ProductCard 
+           dataUrl={'http://localhost:3000/static/shoes.json'}
+           title={'Tênis'}
+           />
         </div>
+           
+           
     )
 }
    
+=======
+import React from 'react'
+import ProductCard from '../layout/ProductCard'
+import InputSearch from '../layout/InputSearch'
+
+function Catalogo(){
+    return (
+        <div>
+            <InputSearch />
+         <ProductCard 
+           dataUrl={'http://localhost:3000/static/shoes.json'}
+           title={'Tênis'}
+           />
+        </div>
+           
+           
+    )
+}
+   
+>>>>>>> jean
    export default Catalogo
