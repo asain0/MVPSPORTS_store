@@ -1,4 +1,9 @@
 
+form{
+   display: flex;
+   flex-direction: column;
+}
+
 .containerTitle {
    background-color: var(--main-bg-color) ;
    padding-top: 8px;

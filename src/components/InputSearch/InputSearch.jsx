@@ -7,7 +7,7 @@ import { FiSearch } from "react-icons/fi"
 const InputSearch = () => {
  
   return (
-    <form>
+    <form className='inputSearch'>
     {/* <FontAwesomeIcon icon={faSearch} /> */}
     <FiSearch/>
     <input
