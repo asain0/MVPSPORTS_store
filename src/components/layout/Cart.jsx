@@ -34,13 +34,6 @@ function Cart(props){
          useState(JSON.parse(localStorage.getItem('mvpCart')))
 
     localStorage.setItem('mvpCart',JSON.stringify(listaProdutos))
-    // let produtosCarrinho =  JSON.parse(localStorage.getItem('mvpCart'))
-    // console.log(produtosCarrinho)
-
-    // useEffect(() => {
-    //     setProdutosCarrinho(JSON.parse(localStorage.getItem('mvpCart')))
-    //   },[produtosCarrinho]);
-
 
     return (
         <div className="menuCart">

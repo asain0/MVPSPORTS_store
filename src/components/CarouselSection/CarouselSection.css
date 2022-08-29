@@ -76,9 +76,16 @@ object-fit: cover;
   background-color: transparent;
   border: none;
   cursor: pointer;
-
+  
 }
 
-.carousel .buttons button:first-child img{
+.carousel .buttons svg {
+  height: 50px;
+  width: 50px;
+}
+.carousel .buttons svg:hover {
+  color: #ff7e3b;
+}
+/* .carousel .buttons button:first-child img{
   transform: rotate(180deg);
-}
+} */

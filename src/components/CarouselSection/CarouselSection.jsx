@@ -1,8 +1,9 @@
 import React from 'react'
 import { useEffect, useState, useRef } from 'react'
-import { Link } from 'react-router-dom'
+import { IoMdArrowDroprightCircle, IoMdArrowDropleftCircle } from 'react-icons/io'
+// import { Link } from 'react-router-dom'
 import '../CarouselSection/CarouselSection.css'
-// import ProductCard from '../layout/ProductCard'
+import ProductCard from '../CardProduto/CardProduto'
 
 function CarouselSection(props) {
   const [data, setData] = useState([])
@@ -24,62 +25,40 @@ function CarouselSection(props) {
 
   const handleLeftClick = e => {
     e.preventDefault()
-    console.log(carousel.current.offsetWidth)
+    // console.log(carousel.current.offsetWidth)
     carousel.current.scrollLeft -= carousel.current.offsetWidth
   }
   const handleRightClick = e => {
     e.preventDefault()
-    console.log(carousel.current.offsetWidth)
+    // console.log(carousel.current.offsetWidth)
     carousel.current.scrollLeft += carousel.current.offsetWidth
   }
 
-  const Card = props => {
-    return props.data.map(item => {
-      const { id, name, price, oldPrice, image } = item
+  // const Card = props => {
+  //   return props.data.map(item => {
+  //     const { id, name, price, oldPrice, image } = item
 
-      return (
-        <Link key={id} to="/Produto">
-          <div className="item" key={id}>
-            <div className="image">
-              <img src={image} alt={name} object-fit={'fill'} />
-            </div>
-            <div className="info">
-              {name && oldPrice && price && (
-                <div>
-                  <span className="name">{name}</span>
-                  <span className="oldPrice">R$ {oldPrice}</span>
-                  <span className="price">R$ {price}</span>
-                </div>
-              )}
-            </div>
-          </div>
+  //     return (
+  //       <Link key={id} to="/Produto">
+  //         <div className="item" key={id}>
+  //           <div className="image">
+  //             <img src={image} alt={name} object-fit={'fill'} />
+  //           </div>
+  //           <div className="info">
+  //             {name && oldPrice && price && (
+  //               <div>
+  //                 <span className="name">{name}</span>
+  //                 <span className="oldPrice">R$ {oldPrice}</span>
+  //                 <span className="price">R$ {price}</span>
+  //               </div>
+  //             )}
+  //           </div>
+  //         </div>
 
-        </Link>
-      )
-    })
-  }
-
-  const LeftButton = props => {
-    return (
-      <button onClick={props.onClick}>
-        <img
-          src="/static/images/216151_right_chevron_icon.png"
-          alt="Scroll left"
-        ></img>{' '}
-      </button>
-    )
-  }
-
-  const RightButton = props => {
-    return (
-      <button onClick={props.onClick}>
-        <img
-          src="/static/images/216151_right_chevron_icon.png"
-          alt="Scroll Right"
-        ></img>{' '}
-      </button>
-    )
-  }
+  //       </Link>
+  //     )
+  //   })
+  // }
 
   if (!data || !data.length) return null
 
@@ -89,13 +68,19 @@ function CarouselSection(props) {
         <h1>{props.title}</h1>
       </div>
       <div className="carousel__itens" ref={carousel}>
-        <Card data={data} />
-        {/* <ProductCard data={data}/> */}
+        {/* <Card data={data} /> */}
+        {data.map( produto => (
+          <ProductCard dadosProduto={produto}/>
+        ))}
       </div>
 
       <div className="buttons">
-        <LeftButton onClick={handleLeftClick} />
-        <RightButton onClick={handleRightClick} />
+        {/* <LeftButton onClick={handleLeftClick} /> */}
+        <IoMdArrowDropleftCircle onClick={handleLeftClick} />
+        
+        {/* <RightButton onClick={handleRightClick} /> */}
+        <IoMdArrowDroprightCircle onClick={handleRightClick} />
+        
       </div>
     </div>
   )
