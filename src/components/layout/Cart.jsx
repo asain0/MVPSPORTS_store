@@ -3,7 +3,7 @@ import './Cart.css'
 import { AiOutlineShoppingCart } from "react-icons/ai"
 import CardProdutoCarrinho from '../CardProdutoCarrinho/CardProdutoCarrinho';
 import { useState } from 'react';
-const listaProdutos = [
+const produtosCarrinho = [
     {
     id:1,
     nome:"Calção de Treino PROGNE SPORTS para Muay Thai",
@@ -30,10 +30,7 @@ const listaProdutos = [
 }
 ];
 function Cart(props){
-    const[produtosCarrinho, setProdutosCarrinho]=
-         useState(JSON.parse(localStorage.getItem('mvpCart')))
 
-    localStorage.setItem('mvpCart',JSON.stringify(listaProdutos))
 
     return (
         <div className="menuCart">
