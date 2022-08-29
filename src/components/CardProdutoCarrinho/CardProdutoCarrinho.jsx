@@ -12,7 +12,7 @@ function CardProdutoCarrinho({produto}) {
 
     const removerProdutoCarrinho = (idProduto)=>{
         let tempListaProdutos = JSON.parse(localStorage.getItem('mvpCart'))
-        let produtoRemovido = tempListaProdutos.filter(item=>item.id!=idProduto)
+        let produtoRemovido = tempListaProdutos.filter(item=>item.id!==idProduto)
         console.log(produtoRemovido)
         localStorage.setItem('mvpCart',JSON.stringify(produtoRemovido))
         // alert('Voce vai remover um produto!\n' + idProduto + "\n" + tempListaProdutos)
