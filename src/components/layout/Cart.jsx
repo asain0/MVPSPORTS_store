@@ -2,7 +2,6 @@
 import './Cart.css'
 import { AiOutlineShoppingCart } from "react-icons/ai"
 import CardProdutoCarrinho from '../CardProdutoCarrinho/CardProdutoCarrinho';
-import { useState } from 'react';
 const produtosCarrinho = [
     {
     id:1,
