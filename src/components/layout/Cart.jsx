@@ -32,6 +32,10 @@ const produtosCarrinho = [
 function Cart(props){
     const [listaProdutos, setListaProdutos] = useState(produtosCarrinho);
 
+    const handleLimparListaProduto = () =>{
+        setListaProdutos([])
+    }
+
     return (
         <div className="menuCart">
             <input type="checkbox" className="check_cart" id="check_cart"/>
@@ -42,13 +46,15 @@ function Cart(props){
             <div className="itens_cart">
                 <div className="titulo_cart">MEU CARRINHO</div>
 
-                {listaProdutos.map( (produto, indice) => <CardProdutoCarrinho key={indice} produto={produto}/>)}
+                {listaProdutos.map( (produto, indice) => <CardProdutoCarrinho key={indice} produto={produto} />)}
                 
                 <div className="itens_cart__total">
                     TOTAL: R$ 1500,00
                 </div>
                 <div>
                     <button className="button_finalizarCompra">Finalizar Compra</button>
+                    <button className="button_finalizarCompra" onClick={handleLimparListaProduto}>Esvaziar Carrinho</button>
+                    
                 </div>
             </div>
         </div>
