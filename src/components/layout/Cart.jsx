@@ -2,6 +2,7 @@ import './Cart.css'
 import { AiOutlineShoppingCart } from "react-icons/ai"
 import CardProdutoCarrinho from '../CardProdutoCarrinho/CardProdutoCarrinho';
 import { useState } from 'react';
+import { Link } from 'react-router-dom';
 
 const produtosCarrinho = [
     {
@@ -51,8 +52,12 @@ function Cart(props){
                 <div className="itens_cart__total">
                     TOTAL: R$ 1500,00
                 </div>
-                <div>
-                    <button className="button_finalizarCompra">Finalizar Compra</button>
+                <div><Link to="/Checkout">
+                    <button className="button_finalizarCompra">
+                        
+                            Finalizar Compra
+                    </button>
+                        </Link>
                     <button className="button_finalizarCompra" onClick={handleLimparListaProduto}>Esvaziar Carrinho</button>
                     
                 </div>
