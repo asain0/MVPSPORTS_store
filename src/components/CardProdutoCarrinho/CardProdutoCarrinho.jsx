@@ -2,8 +2,6 @@ import { useState } from "react";
 import "./CardProdutoCarrinho.css";
 
 function CardProdutoCarrinho({produto}) {
-    // console.log('iniciando cardProdutoCarrinho')
-    // console.log(produto)
     const [quantidade,setQuantidade] = useState(1)
 
     const handleQuantidadeProduto = (operacao) => {
@@ -20,9 +18,7 @@ function CardProdutoCarrinho({produto}) {
    return ( 
       <div className="cardProdutoCarrinho">
             <div className="cardProdutoCarrinho__imagem">
-                {/* <li > */}
                     <img className="imagem_item" src={produto.image} alt={produto.name} />   
-                {/* </li> */}
             </div>
             <div className="cardProdutoCarrinho__dados">
                 <div className="produto_cart">
@@ -39,30 +35,11 @@ function CardProdutoCarrinho({produto}) {
                         <button onClick={()=>(handleQuantidadeProduto('-'))}>-</button>
                         {quantidade}
                         <button onClick={()=>(handleQuantidadeProduto('+'))}>+</button>
-                        
-                    
                     </div>
                 <div className="cardProdutoCarrinho__dados__subtotal">Sub-total:R$ {(quantidade*produto.preco).toFixed(2)}</div>
-
             <p className="remover_produto" onClick={()=>(removerProdutoCarrinho(produto.id))}>Remover item</p>
             </div>
         </div>
-    
-    //  backup do arquivo original
-    //   <li className="item_cart">
-    //         <div className="produto_cart">
-    //             <li >
-    //                 <img className="imagem_item" src={produto.image} alt={produto.name} />   
-    //             </li>
-    //         </div>
-    //         <div className="produto_cart">
-    //             <li >{produto.nome}</li>
-    //         </div>
-    //         <div className="produto_cart_valor">
-    //             <li >{produto.preco}</li>
-    //         </div>
-    //         <p className="remover_produto">Remover item</p>
-    //     </li>
     );
 }
 

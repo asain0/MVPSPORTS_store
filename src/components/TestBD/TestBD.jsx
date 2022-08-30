@@ -21,10 +21,19 @@ function TestBD() {
     }
     fetchData();
   },[URL]);
-
-   console.log("Imprimindo lista carrinho")
-   console.log(listaCarrinho)
    
+  const adicionarItem = () =>{
+   console.log("adicionar item")
+   setListaCarrinho(...listaCarrinho, {
+      "id": 5,
+      "nome": "teste",
+      "preco": 79.99,
+      "image": "http://localhost:3000/static/media/bermuda-img.20edab4ef54d767e9866.jpg"
+      },)
+      console.log("item adicionado")
+      console.log(listaCarrinho)
+  }
+
    return ( 
       <>
          <h1>oi</h1>
@@ -32,6 +41,8 @@ function TestBD() {
             <>
             <h2>{produto.id}</h2>
             <h1>{produto.nome}</h1>
+            
+            <button onClick={adicionarItem}>adicionar</button>
             </>
          ))}
       </>

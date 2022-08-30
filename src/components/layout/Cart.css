@@ -65,28 +65,11 @@
    line-height: 30px;
 }
 
-/* .itens_cart li a{
-   font-size: 16px;
-   background-color: red;
-} */
-
-/* .itens_cart li a {
-   font-size: 20px;
-} */
-
-/* 
-.item_cart{
-   background-color: rgb(73, 73, 73);
-   border-right: 20px solid #222;
-   border-left: 20px solid #222;
-
-} */
-
-/* .menuCart a:hover, a.active {
-   background: none;
+.itens_cart__total{
    color: white;
-} */
-
+   font-weight: 500;
+   font-size: large;
+}
 
 .button_finalizarCompra{
    background-color: #D15A09;
