@@ -1,7 +1,8 @@
-// import styles from './Cart.module.css'
 import './Cart.css'
 import { AiOutlineShoppingCart } from "react-icons/ai"
 import CardProdutoCarrinho from '../CardProdutoCarrinho/CardProdutoCarrinho';
+import { useState } from 'react';
+
 const produtosCarrinho = [
     {
     id:1,
@@ -29,7 +30,7 @@ const produtosCarrinho = [
 }
 ];
 function Cart(props){
-
+    const [listaProdutos, setListaProdutos] = useState(produtosCarrinho);
 
     return (
         <div className="menuCart">
@@ -41,7 +42,7 @@ function Cart(props){
             <div className="itens_cart">
                 <div className="titulo_cart">MEU CARRINHO</div>
 
-                {produtosCarrinho.map( (produto, indice) => <CardProdutoCarrinho key={indice} produto={produto}/>)}
+                {listaProdutos.map( (produto, indice) => <CardProdutoCarrinho key={indice} produto={produto}/>)}
                 
                 <div className="itens_cart__total">
                     TOTAL: R$ 1500,00

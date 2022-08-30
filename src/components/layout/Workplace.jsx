@@ -7,7 +7,6 @@ import Cadastro from '../../components/pages/Cadastro';
 import Catalogo from '../../components/pages/Catalogo';
 import Carrinho from '../../components/pages/Carrinho';
 import Produto from '../../components/pages/Produto';
-import TestBD from '../../components/TestBD/TestBD';
 import Checkout from '../pages/Checkout';
 
 function Workplace() {
@@ -21,7 +20,6 @@ function Workplace() {
             <Route path= "/Carrinho" element={<Carrinho/>}/> 
             <Route path= "/Produto" element={<Produto/>}/> 
             <Route path= "/Checkout" element={<Checkout/>}/> 
-            <Route path= "/testeBD" element={<TestBD/>}/>
           </Routes>
       </div>
     );
