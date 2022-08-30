@@ -2,8 +2,8 @@ import { useState } from "react";
 import "./CardProdutoCarrinho.css";
 
 function CardProdutoCarrinho({produto}) {
-    console.log('iniciando cardProdutoCarrinho')
-    console.log(produto)
+    // console.log('iniciando cardProdutoCarrinho')
+    // console.log(produto)
     const [quantidade,setQuantidade] = useState(1)
 
     const handleQuantidadeProduto = (operacao) => {
