@@ -41,7 +41,6 @@ function Navbar(props){
                     </ul>
                     
                 </div>
-                
         </nav> 
     )
    }

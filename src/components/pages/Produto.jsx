@@ -4,6 +4,8 @@ import AsainBtn from "../AsainBtn/AsainBtn";
 import AsainChck from "../AsainChck/AsainChck";
 import MVPProdutoGaleria from "../MVPProdutoGaleria/MVPProdutoGaleria";
 import CarouselSection from "../CarouselSection/CarouselSection";
+import { useContext } from "react";
+import { CarrinhoContext } from "../../context/CarrinhoContext";
 
 let coresProduto = [{
    id: 1,
@@ -35,6 +37,9 @@ let tamanhosProduto = [
 ]
 
 function Produto() {
+   const {listaCarrinho,saveCarrinho} = useContext(CarrinhoContext)
+  
+  
    return ( 
          <div className="card_produto">
             
@@ -64,8 +69,12 @@ function Produto() {
                            <span>Tamanho:</span> <span class="produto__tamanho__selecionado">P</span>
                            <AsainChck opcoes={tamanhosProduto} name="tamanhos"/>
                         </div>
-                        <AsainBtn titulo="Comprar"/>
-                        <AsainBtn titulo="Adicionar ao carrinho"/>
+                        <AsainBtn onClick={listaCarrinho}>Comprar</AsainBtn>
+                        <AsainBtn onClick={()=>(saveCarrinho({
+                           nome:"Calção de Treino PROGNE SPORTS para Muay Thai",
+                           preco:79.99,
+                           image:"http://localhost:3000/static/media/bermuda-img.20edab4ef54d767e9866.jpg",
+                        }))}>Adicionar ao carrinho</AsainBtn>
                   </div>
                </section>
             </main>

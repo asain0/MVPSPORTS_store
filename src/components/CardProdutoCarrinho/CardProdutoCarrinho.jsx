@@ -1,7 +1,7 @@
 import { useState } from "react";
 import "./CardProdutoCarrinho.css";
 
-function CardProdutoCarrinho({produto}) {
+function CardProdutoCarrinho({produto, eventoRemover}) {
     const [quantidade,setQuantidade] = useState(1)
 
     const handleQuantidadeProduto = (operacao) => {
@@ -9,10 +9,7 @@ function CardProdutoCarrinho({produto}) {
     };
 
     const removerProdutoCarrinho = (idProduto)=>{
-        let tempListaProdutos = JSON.parse(localStorage.getItem('mvpCart'))
-        let produtoRemovido = tempListaProdutos.filter(item=>item.id!==idProduto)
-        console.log(produtoRemovido)
-        localStorage.setItem('mvpCart',JSON.stringify(produtoRemovido))
+        eventoRemover(idProduto)
     }
    return ( 
       <div className="cardProdutoCarrinho">
