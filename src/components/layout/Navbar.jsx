@@ -12,6 +12,9 @@ function Navbar(props){
                         <img className={styles.logo_mvp} src={logo} alt="logo MVP" />
                     </Link>
                 </div>
+                <div className={styles.cart}>
+                            <Cart className={styles.cart}/>
+                </div>
                 <div className={styles.menu_loja}>
                     <input type="checkbox" className={styles.check} id="check"/>
                     <label for="check" className={styles.checkbtn}>
@@ -38,9 +41,7 @@ function Navbar(props){
                     </ul>
                     
                 </div>
-                <div className={styles.cart}>
-                            <Cart className={styles.cart}/>
-                </div>
+                
         </nav> 
     )
    }
