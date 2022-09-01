@@ -3,8 +3,6 @@ import { AiOutlineShoppingCart } from "react-icons/ai"
 import CardProdutoCarrinho from '../CardProdutoCarrinho/CardProdutoCarrinho';
 import { useContext } from 'react';
 import { Link } from 'react-router-dom';
-import MvpButton from '../MvpButton/MvpButton';
-import {CarrinhoContext} from '../../context/CarrinhoContext'
 import {CarrinhoContext} from '../../context/CarrinhoContext'
 
 function Cart(props){
@@ -39,13 +37,6 @@ function Cart(props){
                 
                 <div className="itens_cart__total">
                     TOTAL: R$ {carrinho.reduce((total,item) => total+(item.preco*item.quantidade),0)}
-                    {
-                        
-                            carrinho.map(
-                                item => console.log(item.quantidade)
-                            )
-                        
-                    }
                 </div>
                 <div><Link to="/Checkout">
                     <button className="button_finalizarCompra">
