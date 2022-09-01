@@ -1,15 +1,22 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import "./CardProdutoCarrinho.css";
 
 function CardProdutoCarrinho({produto, eventoRemover}) {
-    const [quantidade,setQuantidade] = useState(1)
+    const [quantidade,setQuantidade] = useState(produto.quantidade)
+    console.log('quantidade cardprodutocarrinho: '+produto)
+    useEffect(()=>{
+        if(quantidade<1)
+        {
+            setQuantidade(1)
+        }
+    })
+
 
     const handleQuantidadeProduto = (operacao) => {
         return operacao === '+' ? setQuantidade(quantidade+1) : setQuantidade(quantidade-1) ;
     };
 
     const removerProdutoCarrinho = (produtoRemovido)=>{
-        console.log(produtoRemovido)
         eventoRemover(produtoRemovido)
     }
    return ( 

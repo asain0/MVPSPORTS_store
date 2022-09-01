@@ -9,26 +9,29 @@ export function CarrinhoProvider({children}) {
    // const [carrinho,setCarrinho] = useState(produtosCarrinho);
 
    const saveCarrinho = produto =>{
-      console.log(`dados do produto recebido ${produto}`)
       const newProduto = {
-         idCarrinho:carrinho.length + 1,
+         idCarrinhoValor:  carrinho.length +1,
          idProduto: produto.id,
          nome:produto.nome,
          preco:produto.preco,
          imagem:produto.imagem,
-         quantidade: 1,
+         quantidade: 1
       };
-      console.log(carrinho)
-      console.log("ADD produto no carrinho")
-      console.log(newProduto)
+      // console.log(carrinho)
+      // console.log("ADD produto no carrinho")
+      // console.log(newProduto)
       setCarrinho(
          [...carrinho,newProduto]
       );
    }
 
+   // const alteraQuantidade = (produto, novaQtde)=>{
+   //    let posicaoProduto = carrinho.findIndex(item => item.idCarrinho === produto.idCarrinho)
+   //    console.log
+   // } continuar depois
    const removeCarrinho = (produtoRem) =>{
-      console.log(`Produto a ser removido`)
-      console.log(produtoRem)
+      // console.log(`Produto a ser removido`)
+      // console.log(produtoRem)
       const newCarrinho = carrinho.filter(item => item.idProduto !== produtoRem.idProduto);
       
       setCarrinho(newCarrinho);

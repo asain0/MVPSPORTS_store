@@ -3,16 +3,15 @@ import { AiOutlineShoppingCart } from "react-icons/ai"
 import CardProdutoCarrinho from '../CardProdutoCarrinho/CardProdutoCarrinho';
 import { useContext, useState } from 'react';
 import { Link } from 'react-router-dom';
-import MvpButton from '../MvpButton/MvpButton';
 import {CarrinhoContext} from '../../context/CarrinhoContext'
 
 function Cart(props){
     const {carrinho,removeCarrinho} = useContext(CarrinhoContext);
-    const [listaProdutos, setListaProdutos] = useState(carrinho);
+    // const [listaProdutos, setListaProdutos] = useState(carrinho);
 
-    const handleLimparListaProduto = () =>{
-        setListaProdutos([])
-    }
+    // const handleLimparListaProduto = () =>{
+    //     setListaProdutos([])
+    // }
 
     const handleListaProdutoRemoverItem = (produto) =>{
         removeCarrinho(produto)
@@ -37,14 +36,21 @@ function Cart(props){
                 }
                 
                 <div className="itens_cart__total">
-                    TOTAL: R$ 1500,00 - Falta ajustar
+                    TOTAL: R$ {carrinho.reduce((total,item) => total+(item.preco*item.quantidade),0)}
+                    {
+                        
+                            carrinho.map(
+                                item => console.log(item.quantidade)
+                            )
+                        
+                    }
                 </div>
                 <div><Link to="/Checkout">
                     <button className="button_finalizarCompra">
                             Fechar pedido
                     </button>
                         </Link>
-                    <button className="button_finalizarCompra" onClick={handleLimparListaProduto}>Esvaziar Carrinho</button>
+                    <button className="button_finalizarCompra" >Esvaziar Carrinho</button>
                 </div>
             </div>
         </div>
