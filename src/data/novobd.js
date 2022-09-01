@@ -1489,6 +1489,7 @@ export const produtos1 = [
                 sku: 'fem-shoes-adidas-color-black-40'
             }
         ],
+        img:'./produtos/31 - tenis-mas.PNG',
     },
 
     {
@@ -1548,6 +1549,7 @@ export const produtos1 = [
                 sku: 'fem-shoes-nike-color-black-40'
             }
         ],
+        img:'./produtos/32 - tenis-mas.PNG',
     },
 
     {
@@ -1607,6 +1609,7 @@ export const produtos1 = [
                 sku: 'fem-shoes-adidas-color-blue-40'
             }
         ],
+        img:'./produtos/33 - tenis-mas.PNG',
     },
 
     {
@@ -1666,6 +1669,7 @@ export const produtos1 = [
                 sku: 'fem-shoes-asics-color-blue-40'
             }
         ],
+        img:'./produtos/34 - tenis-mas.PNG',
     },
 
     {
@@ -1725,6 +1729,7 @@ export const produtos1 = [
                 sku: 'fem-shoes-mizuno-color-orange-40'
             }
         ],
+        img:'./produtos/35 - tenis-mas.PNG',
     },
 
     {
@@ -1784,6 +1789,7 @@ export const produtos1 = [
                 sku: 'fem-shoes-asics-color-black-40'
             }
         ],
+        img:'./produtos/36 - tenis-mas.PNG',
     },
 
     {
@@ -1843,6 +1849,7 @@ export const produtos1 = [
                 sku: 'fem-shoes-nike-color-orange-40'
             }
         ],
+        img:'./produtos/37 - tenis-mas.PNG',
     },
 
     {
@@ -1902,6 +1909,7 @@ export const produtos1 = [
                 sku: 'fem-shoes-mizuno-color-white-40'
             }
         ],
+        img:'./produtos/38 - tenis-mas.PNG',
     },
 
     {
@@ -1961,6 +1969,7 @@ export const produtos1 = [
                 sku: 'fem-shoes-puma-color-yellow-40'
             }
         ],
+        img:'./produtos/39 - tenis-mas.PNG',
     },
 
     {
@@ -2020,5 +2029,6 @@ export const produtos1 = [
                 sku: 'fem-shoes-fila-color-red-40'
             }
         ],
+        img:'./produtos/40 - tenis-mas.PNG',
     },
 ]
