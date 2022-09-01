@@ -9,7 +9,7 @@ function CardProdutoCarrinho({produto, eventoRemover}) {
         {
             setQuantidade(1)
         }
-    })
+    },[quantidade])
 
 
     const handleQuantidadeProduto = (operacao) => {

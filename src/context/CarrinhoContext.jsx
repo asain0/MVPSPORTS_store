@@ -1,5 +1,5 @@
 import React, {useState, createContext} from "react";
-import {produtosCarrinho} from './carrinho.js'
+// import {produtosCarrinho} from './carrinho.js'
 import { MVPBD } from '../data/MVPBD'
 export const CarrinhoContext = createContext();
 

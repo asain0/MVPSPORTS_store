@@ -39,6 +39,7 @@ let tamanhosProduto = [
 function Produto() {
 
    const {listaCarrinho,saveCarrinho} = useContext(CarrinhoContext)
+   false===true? console.log(listaCarrinho): "";
    const { id } = useParams();
    const produtoAtual = MVPBD.produtos.find(prod => prod.id ===parseInt(id))
 

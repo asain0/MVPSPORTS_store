@@ -1,7 +1,7 @@
 import './Cart.css'
 import { AiOutlineShoppingCart } from "react-icons/ai"
 import CardProdutoCarrinho from '../CardProdutoCarrinho/CardProdutoCarrinho';
-import { useContext, useState } from 'react';
+import { useContext } from 'react';
 import { Link } from 'react-router-dom';
 import {CarrinhoContext} from '../../context/CarrinhoContext'
 
