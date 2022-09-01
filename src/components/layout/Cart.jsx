@@ -7,17 +7,16 @@ import MvpButton from '../MvpButton/MvpButton';
 import {CarrinhoContext} from '../../context/CarrinhoContext'
 
 function Cart(props){
-    const {carrinho} = useContext(CarrinhoContext);
+    const {carrinho,removeCarrinho} = useContext(CarrinhoContext);
     const [listaProdutos, setListaProdutos] = useState(carrinho);
 
     const handleLimparListaProduto = () =>{
         setListaProdutos([])
     }
 
-    const handleListaProdutoRemoverItem = (produtoId) =>{
-        setListaProdutos(listaProdutos.filter(
-            produto => produto.id !== produtoId
-        ))
+    const handleListaProdutoRemoverItem = (produto) =>{
+        removeCarrinho(produto)
+        
     }
     return (
         <div className="menuCart">
@@ -29,10 +28,16 @@ function Cart(props){
             <div className="itens_cart">
                 <div className="titulo_cart">MEU CARRINHO</div>
 
-                {carrinho.map( (produto, indice) => <CardProdutoCarrinho eventoRemover={handleListaProdutoRemoverItem} key={indice} produto={produto} />)}
+                {carrinho.map( (produtosCarrinho) => 
+                        <CardProdutoCarrinho key={produtosCarrinho.idCarrinho}
+                            eventoRemover={handleListaProdutoRemoverItem} 
+                            produto={produtosCarrinho} 
+                        />
+                    )
+                }
                 
                 <div className="itens_cart__total">
-                    TOTAL: R$ 1500,00
+                    TOTAL: R$ 1500,00 - Falta ajustar
                 </div>
                 <div><Link to="/Checkout">
                     <button className="button_finalizarCompra">
@@ -40,7 +45,6 @@ function Cart(props){
                     </button>
                         </Link>
                     <button className="button_finalizarCompra" onClick={handleLimparListaProduto}>Esvaziar Carrinho</button>
-                    <MvpButton onClick={handleLimparListaProduto} tittle="teste"></MvpButton>
                 </div>
             </div>
         </div>

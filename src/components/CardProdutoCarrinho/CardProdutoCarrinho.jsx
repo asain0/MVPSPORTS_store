@@ -8,16 +8,18 @@ function CardProdutoCarrinho({produto, eventoRemover}) {
         return operacao === '+' ? setQuantidade(quantidade+1) : setQuantidade(quantidade-1) ;
     };
 
-    const removerProdutoCarrinho = (idProduto)=>{
-        eventoRemover(idProduto)
+    const removerProdutoCarrinho = (produtoRemovido)=>{
+        console.log(produtoRemovido)
+        eventoRemover(produtoRemovido)
     }
    return ( 
       <div className="cardProdutoCarrinho">
             <div className="cardProdutoCarrinho__imagem">
-                    <img className="imagem_item" src={produto.image} alt={produto.name} />   
+                    <img className="imagem_item" src={produto.imagem} alt={produto.name} />   
             </div>
             <div className="cardProdutoCarrinho__dados">
                 <div className="produto_cart">
+                    {produto.idCarrinho}
                     <span >{produto.nome}</span>
                 </div>
                 <div className="produto_cart">
@@ -33,7 +35,7 @@ function CardProdutoCarrinho({produto, eventoRemover}) {
                         <button onClick={()=>(handleQuantidadeProduto('+'))}>+</button>
                     </div>
                 <div className="cardProdutoCarrinho__dados__subtotal">Sub-total:R$ {(quantidade*produto.preco).toFixed(2)}</div>
-            <p className="remover_produto" onClick={()=>(removerProdutoCarrinho(produto.id))}>Remover item</p>
+            <p className="remover_produto" onClick={()=>(removerProdutoCarrinho(produto))}>Remover item</p>
             </div>
         </div>
     );

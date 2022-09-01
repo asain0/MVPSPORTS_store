@@ -18,7 +18,8 @@ function Workplace() {
             <Route path= "/Cadastro" element={<Cadastro/>}/> 
             <Route path= "/Catalogo" element={<Catalogo/>}/>
             <Route path= "/Carrinho" element={<Carrinho/>}/> 
-            <Route path= "/Produto" element={<Produto/>}/> 
+            {/* <Route path= "/Produto" element={<Produto/>}/>  */}
+            <Route path= "/Produto/:id" element={<Produto/>}/> 
             <Route path= "/Checkout" element={<Checkout/>}/> 
           </Routes>
       </div>

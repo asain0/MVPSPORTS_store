@@ -19,7 +19,7 @@
    height: 90px;
 }
 .produto__vizualizacao{
-	max-width: 500px;
+	width: 500px;
 	margin: auto;
 }
 
@@ -80,6 +80,7 @@ display: flex;
 /* main */
 @media (max-width: 991px){
 
+
    .item__produto{
       max-width: 800px;
    }
@@ -102,9 +103,20 @@ display: flex;
 
    .produto__galeria{
       flex-direction: row;
+		max-width: 80vw;
+
    }
 
    .produto__dados{
       width: 80%;
    }
+	.produto__vizualizacao{
+		max-width: 80vw;
+	}
 }
+
+/* @media (max-width: 320px){
+	.produto__imagem{
+		width: 320px;
+	}
+} */

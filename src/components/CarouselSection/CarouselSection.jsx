@@ -1,27 +1,27 @@
 import React from 'react'
-import { useEffect, useState, useRef } from 'react'
+import { useRef } from 'react'
 import { IoMdArrowDroprightCircle, IoMdArrowDropleftCircle } from 'react-icons/io'
 // import { Link } from 'react-router-dom'
 import '../CarouselSection/CarouselSection.css'
 import ProductCard from '../CardProduto/CardProduto'
 
-function CarouselSection(props) {
-  const [data, setData] = useState([])
+function CarouselSection({data, title}) {
+  // const [data, setData] = useState([props.dataUrl])
   const carousel = useRef(null)
 
-  useEffect(() => {
-    const fetchData = async () => {
-      try {
-        const response = await fetch(props.dataUrl)
-        const data = await response.json()
-        setData(data)
-      } catch (error) {
-        console.log('error', error)
-      }
-    }
+  // useEffect(() => {
+  //   const fetchData = async () => {
+  //     try {
+  //       const response = await fetch(props.dataUrl)
+  //       const data = await response.json()
+  //       setData(data)
+  //     } catch (error) {
+  //       console.log('error', error)
+  //     }
+  //   }
 
-    fetchData()
-  }, [props.dataUrl]);
+  //   fetchData()
+  // }, [props.dataUrl]);
 
   const handleLeftClick = e => {
     e.preventDefault()
@@ -32,16 +32,16 @@ function CarouselSection(props) {
     carousel.current.scrollLeft += carousel.current.offsetWidth
   }
 
-  if (!data || !data.length) return null
+  // if (!data || !data.length) return null
 
   return (
     <div className="carousel">
       <div className="carousel__tittle">
-        <h1>{props.title}</h1>
+        <h1>{title}</h1>
       </div>
       <div className="carousel__itens" ref={carousel}>
         {data.map( produto => (
-          <ProductCard dadosProduto={produto}/>
+          <ProductCard dadosProduto={produto} key={produto.id}/>
         ))}
       </div>
 
