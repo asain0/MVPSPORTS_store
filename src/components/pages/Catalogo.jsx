@@ -6,7 +6,7 @@ import {MVPBD} from '../../data/MVPBD'
 
 function Catalogo(){
   // DEV informou que fez esse trecho para acessar a lista de produtos 
-  const [data, setData] = useState(MVPBD.produtos)
+    const data = MVPBD.produtos
   // let data = MVPBD.produtos
   
   //Alterar para ficar mais dinâmico 
