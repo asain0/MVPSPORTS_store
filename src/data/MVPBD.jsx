@@ -86,7 +86,7 @@ export const MVPBD = {
          ref: "94461431",
          nome: "Tênis Infantil Nike Flex Runner",
          preco: 279.99,
-         precoOriginal: null,
+         precoOriginal: 300,
          imagem: "https://imgcentauro-a.akamaihd.net/230x230/94461431.jpg"
        },
        {
