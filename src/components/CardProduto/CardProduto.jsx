@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom'
 
 function CardProduto({dadosProduto}) {
    return ( 
-      <Link to={"/produto/"+dadosProduto.id}>
+      <Link className='cardLink' to={"/produto/"+dadosProduto.id}>
          <div className="cardProduto" key={dadosProduto.id}>
             <div className="image">
                <img src={dadosProduto.imagem} alt={dadosProduto.nome} object-fit={'fill'} />
