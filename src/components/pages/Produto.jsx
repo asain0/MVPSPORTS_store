@@ -1,3 +1,5 @@
+import { Link } from 'react-router-dom'
+
 import "./produto.css"
 import AsainBtn from "../AsainBtn/AsainBtn";
 import AsainChck from "../AsainChck/AsainChck";
@@ -6,6 +8,7 @@ import { useContext } from "react";
 import { useParams } from "react-router-dom";
 import {MVPBD} from '../../data/MVPBD'
 import { CarrinhoContext } from "../../context/CarrinhoContext";
+import CarouselSection from '../CarouselSection/CarouselSection';
 
 let coresProduto = [{
    id: 1,
@@ -43,48 +46,54 @@ function Produto() {
    const { id } = useParams();
    const produtoAtual = MVPBD.produtos.find(prod => prod.id ===parseInt(id))
 
+   // const onClickComprar = () => {
+   //    ()=>(saveCarrinho( produtoAtual))
+   // }  
+
    return ( 
          <div className="card_produto">
             <h1>{produtoAtual.nome}</h1>
-            <main class="item__produto">
+            <main className="item__produto">
 
-               <div class="identificao">
-                  {/* <h2 class="identificacao__titulo">{produtoAtual.nome} </h2> */}
-                  <span class="identificacao__referencia">REF.: {produtoAtual.ref}</span>
+               <div className="identificao">
+                  {/* <h2 className="identificacao__titulo">{produtoAtual.nome} </h2> */}
+                  <span className="identificacao__referencia">REF.: {produtoAtual.ref}</span>
                </div>
                
-               <section class="produto">
+               <section className="produto">
 
                   <MVPProdutoGaleria imagem={produtoAtual.imagem}/>
 
-                  <div class="produto__dados">
-                        <div class="produto__preco">
-                           <div class="produto__preco__original">{produtoAtual.precoOriginal}</div>
-                           <div class="produto__preco__atual">{produtoAtual.preco}</div>
+                  <div className="produto__dados">
+                        <div className="produto__preco">
+                           <div className="produto__preco__original">{produtoAtual.precoOriginal}</div>
+                           <div className="produto__preco__atual">{produtoAtual.preco}</div>
                         </div>
 
-                        <div class="produto__cores">
-                           <span>COR: </span> <span class="produto_cores_selecionada">Preta</span>
+                        <div className="produto__cores">
+                           <span>COR: </span> <span className="produto_cores_selecionada">Preta</span>
                            <AsainChck opcoes={coresProduto} name="cor"/>
                         </div>
 
-                        <div class="produto__tamanho">
-                           <span>Tamanho:</span> <span class="produto__tamanho__selecionado">P</span>
+                        <div className="produto__tamanho">
+                           <span>Tamanho:</span> <span className="produto__tamanho__selecionado">P</span>
                            <AsainChck opcoes={tamanhosProduto} name="tamanhos"/>
                         </div>
-                        <AsainBtn onClick={()=>(saveCarrinho( produtoAtual                           
-                        ))}>Comprar</AsainBtn>
-                        <AsainBtn onClick={()=>(saveCarrinho( produtoAtual                           
-                        ))}>Adicionar ao carrinho</AsainBtn>
+                        <Link  to="/checkout/">
+                           <AsainBtn onClick={()=>(saveCarrinho( produtoAtual))}>
+                              Comprar
+                           </AsainBtn>
+                        </Link>
+                        <AsainBtn onClick={()=>(saveCarrinho(produtoAtual))}>Adicionar ao carrinho</AsainBtn>
                   </div>
                </section>
             </main>
 
          <div className="outrosProdutos">
-         {/* <CarouselSection
-        dataUrl={'http://localhost:3000/static/shoes.json'}
+         <CarouselSection
+        data={MVPBD.produtos}
         title={'Novidades'}
-      /> */}
+      />
                      </div>
 
          </div>

@@ -3,7 +3,7 @@ import "./CardProdutoCarrinho.css";
 
 function CardProdutoCarrinho({produto, eventoRemover}) {
     const [quantidade,setQuantidade] = useState(produto.quantidade)
-    console.log('quantidade cardprodutocarrinho: '+produto)
+    // console.log('quantidade cardprodutocarrinho: '+produto)
     useEffect(()=>{
         if(quantidade<1)
         {
@@ -22,11 +22,10 @@ function CardProdutoCarrinho({produto, eventoRemover}) {
    return ( 
       <div className="cardProdutoCarrinho">
             <div className="cardProdutoCarrinho__imagem">
-                    <img className="imagem_item" src={produto.imagem} alt={produto.name} />   
+                <img className="imagem_item" src={produto.imagem} alt={produto.name} />   
             </div>
             <div className="cardProdutoCarrinho__dados">
                 <div className="produto_cart">
-                    {produto.idCarrinho}
                     <span >{produto.nome}</span>
                 </div>
                 <div className="produto_cart">

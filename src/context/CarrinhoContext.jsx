@@ -8,7 +8,8 @@ export function CarrinhoProvider({children}) {
    const [carrinho,setCarrinho] = useState(MVPBD.carrinho);
    // const [carrinho,setCarrinho] = useState(produtosCarrinho);
 
-   const saveCarrinho = produto =>{
+   const adicionarProdutoCarrinho = produto =>{
+      // addProdutoCarrinho(produto)
       const newProduto = {
          idCarrinhoValor:  carrinho.length +1,
          idProduto: produto.id,
@@ -25,15 +26,21 @@ export function CarrinhoProvider({children}) {
       );
    }
 
-   // const alteraQuantidade = (produto, novaQtde)=>{
-   //    let posicaoProduto = carrinho.findIndex(item => item.idCarrinho === produto.idCarrinho)
-   //    console.log
-   // } continuar depois
+   const saveCarrinho = (produto) =>{
+      const indiceProduto = carrinho.findIndex( item => item.idProduto === produto.id)
+      indiceProduto === -1?       adicionarProdutoCarrinho(produto) :
+      adicionarQuantidadeCarrinho(indiceProduto);
+   }
+
+   const adicionarQuantidadeCarrinho = (indiceProduto) =>{
+      // carrinho[indiceProduto].quantidade++;
+      carrinho[indiceProduto].quantidade++
+      console.log(carrinho[indiceProduto].quantidade)
+      setCarrinho([...carrinho])
+   }
+
    const removeCarrinho = (produtoRem) =>{
-      // console.log(`Produto a ser removido`)
-      // console.log(produtoRem)
       const newCarrinho = carrinho.filter(item => item.idProduto !== produtoRem.idProduto);
-      
       setCarrinho(newCarrinho);
    }
 

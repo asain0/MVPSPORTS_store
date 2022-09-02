@@ -9,13 +9,13 @@ function AsainChck({opcoes, name}) {
  id,  for: link entre label e input componente selecionado
  conteudo: conteúdo a ser apresentado no componente
 */
-      <div class="produto__cores__opcoes">
-         {opcoes.map(opcao => {
+      <div className="produto__cores__opcoes">
+         {opcoes.map((opcao, indice) => {
             return(
             // <div>{opcao}</div>
-            <div className="produto__cores__opcoes__item input-radio-hckdv">
+            <div key={indice} className="produto__cores__opcoes__item input-radio-hckdv">
                <input type="radio" name={name} value={opcao.value} id={opcao.id + name}/>
-               <label for={opcao.id + name} id={opcao.id + name}>{opcao.conteudo}</label>
+               <label htmlFor={opcao.id + name} id={opcao.id + name}>{opcao.conteudo}</label>
             </div>
             )
          })}

@@ -17,7 +17,7 @@ function Navbar(props){
                 </div>
                 <div className={styles.menu_loja}>
                     <input type="checkbox" className={styles.check} id="check"/>
-                    <label for="check" className={styles.checkbtn}>
+                    <label htmlFor="check" className={styles.checkbtn}>
                         <i className={styles.menu}>  < AiOutlineMenu /></i>
                     </label>
                     

@@ -20,7 +20,7 @@ function Cart(props){
     return (
         <div className="menuCart">
             <input type="checkbox" className="check_cart" id="check_cart"/>
-            <label for="check_cart" className="checkbtn_cart">
+            <label htmlFor="check_cart" className="checkbtn_cart">
                 <i className="menu_cart">  < AiOutlineShoppingCart /></i>
             </label>
 
