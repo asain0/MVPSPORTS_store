@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+// import React, { useState } from 'react'
 import InputSearch from '../InputSearch/InputSearch'
 import CardProduto from '../CardProduto/CardProduto';
 import '../pages/Catalogo.css'
