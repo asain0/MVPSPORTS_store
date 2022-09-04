@@ -1,7 +1,10 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect, useContext } from "react";
 import "./CardProdutoCarrinho.css";
+import {CarrinhoContext} from '../../context/CarrinhoContext'
 
 function CardProdutoCarrinho({produto, eventoRemover}) {
+    const {saveCarrinho} = useContext(CarrinhoContext);
+
     const [quantidade,setQuantidade] = useState(produto.quantidade)
     // console.log('quantidade cardprodutocarrinho: '+produto)
     useEffect(()=>{
@@ -13,8 +16,14 @@ function CardProdutoCarrinho({produto, eventoRemover}) {
 
 
     const handleQuantidadeProduto = (operacao) => {
-        return operacao === '+' ? setQuantidade(quantidade+1) : setQuantidade(quantidade-1) ;
+        // return operacao === '+' ? setQuantidade(quantidade+1) : setQuantidade(quantidade-1) ;
+        return operacao === '+' ? (addItemCarrinho()) : setQuantidade(quantidade-1) ;
     };
+
+    const addItemCarrinho = ()=>{
+        saveCarrinho(produto); 
+        setQuantidade(quantidade+1);
+    }
 
     const removerProdutoCarrinho = (produtoRemovido)=>{
         eventoRemover(produtoRemovido)
