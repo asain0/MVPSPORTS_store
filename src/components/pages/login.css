@@ -14,46 +14,16 @@
    padding-bottom: 15px;
 }
 
-.boxBotton {
-   /* display: flex;
-   justify-content: center;
-   align-items: center;  */
-   padding-left: 8px;
-   display: inline-block;
-}
-
-.logoGoogle, .logoFacebook, .logoApple {
-   
-   width: 90px;
-   height: 60px;
-   border: #c9c9c9 solid 1px;
-   border-radius: 3px;
-   font-size: 30px;
-   text-align: center;   
-}
-
-.logoGoogle {
-   color: red;
-   padding-top: 14px;
-}
-
-.logoFacebook {
+.facebook {
    color: blue;
-   padding-top: 14px;
 }
 
-.logoApple {
+.google {
+   color: red;
+}
+
+.apple {
    color:black;
-   padding-top: 13px;   
-}
-
-.logoGoogle:hover, .logoFacebook:hover, .logoApple:hover {
-   cursor: pointer;
-   box-shadow: 0 0 11px #c9c9c9;
-}
-
-.icones {
-   text-decoration: none;
 }
 
 ul li {
