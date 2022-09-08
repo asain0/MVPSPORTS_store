@@ -3,7 +3,7 @@ import './login.css'
 import AsainBtn from '../AsainBtn/AsainBtn'
 import MvpModal from '../MvpModal/MvpModal'
 import { useState } from 'react'
-import IconesLogin from '../iconesLogin/iconesLogin'
+// import IconesLogin from '../iconesLogin/iconesLogin'
 import {FaFacebook} from 'react-icons/fa';
 import {FaGoogle} from 'react-icons/fa';
 import {FaApple} from 'react-icons/fa';
