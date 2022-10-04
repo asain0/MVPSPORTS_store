@@ -1,12 +1,18 @@
 import React from 'react'
+import {Link} from 'react-router-dom';
+import {useFetch} from '../../hooks/useFetch';
 import { MVPBD } from '../../data/MVPBD'
 import CarouselSection from '../CarouselSection/CarouselSection'
 
+
 const Home = () => {
+  const url = "http://localhost/produtos";
+  const {data: produtos, error} = useFetch(url);
+
   return (
     <div>
       <CarouselSection
-        data={MVPBD.produtos}
+        data={produtos}
         // dataUrl={'http://localhost:3000/static/shoes.json'}
         title={'Novidades'}
       />
